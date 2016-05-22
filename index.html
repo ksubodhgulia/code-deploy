@@ -9,14 +9,44 @@
 	
 	<style>
 		* { margin: 0; padding: 0; }
+		body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+		nav {
+    background-color: #333;
+    margin: 0;
+    overflow: hidden;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    /* This allow us to arrange list items in a row, without using float */
+    display: inline-block;
+    list-style-type: none;
+}
+
+/* Create a style for the first level items */
+nav > ul > li > a {
+    color: #aaa;
+    background-color:#FF0;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+}
 		
 		html { 
-			background: url(https://s3.amazonaws.com/khushhhu/image.jpg) no-repeat center center fixed; 
+			background: url(image/image.jpg) no-repeat center center fixed; 
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
 		}
+		
 		
 		#page-wrap { width: 400px; margin: 50px auto; padding: 20px; background: white; -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black; }
 		p { font: 40px/2 Georgia, Serif; margin: 0 0 30px 0; text-indent: 40px; }
@@ -24,7 +54,15 @@
 </head>
 
 <body>
-
+<header>
+    <nav>
+		<ul>
+            <li><a href="image/do-this.jpg">Image</a></li>
+            <li><a href="manmohan.html">Manmohan speech</a></li>
+            
+        </ul>
+	</nav>
+</header>
     <div id="page-wrap">
            <p> Test Auto-scaling </p>
     </div>
@@ -82,7 +120,7 @@
 		border-radius: 0;
 		bottom: auto;
 		margin: 0;
-		background: url(https://s3.amazonaws.com/khushhhu/image.jpg) no-repeat;
+		background: url(/image/image.jpg) no-repeat;
 		background-size: 100%;
 		overflow: hidden;
 		text-indent: -9999px;
